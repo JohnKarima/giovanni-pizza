@@ -1,11 +1,10 @@
 # Project Name 
 Giovanni's Pizzeria.
 
+## Project Description 
+
 ## Author 
 - [John Karima](https://github.com/JohnKarima)
-
-## About 
-
 
 ## Setup Instructions 
 - Clone the repository 
