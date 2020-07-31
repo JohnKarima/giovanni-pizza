@@ -2,7 +2,7 @@
 Giovanni's Pizzeria.
 
 ## Author 
-Created by John Karima.
+- [John Karima](https://github.com/JohnKarima)
 
 ## About 
 
