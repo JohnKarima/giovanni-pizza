@@ -12,7 +12,7 @@
 <body>  
 
   <div class="container">
-<form>
+<form id="pizzaForm">
 
   <br>
 
@@ -21,7 +21,7 @@
   <br>
 
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="smallPizza" id="smallPizza" value="600" checked>
+    <input class="form-check-input" type="radio" name="pizzaSize" id="smallPizza" value="600" checked>
     <label class="form-check-label" for="smallPizza">
       Small
     </label>
@@ -36,7 +36,7 @@
 
 
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="mediumPizza" id="mediumPizza" value="800">
+    <input class="form-check-input" type="radio" name="pizzaSize" id="mediumPizza" value="800">
     <label class="form-check-label" for="mediumPizza">
       Medium
     </label>
@@ -46,7 +46,7 @@
 
 
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="largePizza" id="largePizza" value="1000">
+    <input class="form-check-input" type="radio" name="pizzaSize" id="largePizza" value="1000">
     <label class="form-check-label" for="largePizza">
       Large
     </label>
@@ -60,7 +60,7 @@
 
   <div class="form-group">
     <label for="pizzaCrust">Pizza Crust</label>
-    <select class="form-control" id="pizzaCrust">
+    <select class="form-control" name = "pizzaCrust" id="pizzaCrust">
       <option value="100">Crispy</option>
       <option value="200">Stuffed</option>
       <option value="300">Gluten-free</option>
@@ -75,53 +75,55 @@
   <br>
 
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="100" id="extraCheese">
+    <input class="form-check-input" name="toppings" type="checkbox" value="100" id="extraCheese">
     <label class="form-check-label" for="defaultCheck1">
       Extra Cheese
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="150" id="bacon" >
+    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="bacon" >
     <label class="form-check-label" for="defaultCheck2">
       Bacon
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="200" id="mushrooms" >
+    <input class="form-check-input" name="toppings" type="checkbox" value="200" id="mushrooms" >
     <label class="form-check-label" for="defaultCheck2">
       Mushrooms
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="150" id="chicken">
+    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="chicken">
     <label class="form-check-label" for="defaultCheck1">
       Chicken
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="150" id="sausage" >
+    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="sausage" >
     <label class="form-check-label" for="defaultCheck2">
       Sausage
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="150" id="pepperoni" >
+    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="pepperoni" >
     <label class="form-check-label" for="defaultCheck2">
       Pepperoni
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="50" id="peppers" >
+    <input class="form-check-input" name="toppings" type="checkbox" value="50" id="peppers" >
     <label class="form-check-label" for="defaultCheck2">
       Green Peppers
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="50" id="onions" >
+    <input class="form-check-input" name="toppings" type="checkbox" value="50" id="onions" >
     <label class="form-check-label" for="defaultCheck2">
       Caramelized onions
     </label>
   </div>
+
+  <button type="submit" class="btn">Add</button>
 
 
 
@@ -129,6 +131,15 @@
 </form>
 
 </div>
+
+
+
+
+
+<h2>Pizza Order Total:</h2>
+          <ul id="pizzaOrderFinal">
+
+          </ul>
   
 </body>
 </html>

@@ -1,14 +1,70 @@
-function Contact(first, last) {
-  this.firstName = first;
-  this.lastName = last;
-  this.addresses = [];
+function PizzaOrder(pizzaSize, pizzaCrust, toppings) {
+  this.pizzaSize = pizzaSize;
+  this.pizzaCrust = pizzaCrust;
+  this.toppings = toppings;
 }
 
-function Address(street, city, county) {
-  this.street = street;
-  this.city = city;
-  this.county = county;
-}
+
+$(document).ready(function(){
+  $("form#pizzaForm").submit(function(event){
+    event.preventDefault();
+
+
+    // var pizzaCrustCost = $("input:radio[name=pizzaCrust]:checked").val()
+    // var pizzaToppingsCost = $("input:radio[name=topping]:checked").val()
+
+
+
+    
+
+
+
+    var pizzaSizeCost = parseInt($("input:radio[name=pizzaSize]:checked").val());
+
+    var pizzaCrustCost = parseInt($("#pizzaCrust option:selected").val());
+
+
+    var pizzaToppingsCost = parseInt($("input[name=toppings]:checked").val());
+
+    var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCost;
+
+
+
+
+
+
+
+
+    alert(pizzaCostTotal);
+
+    // var pizzaCalc = new PizzaOrder(pizzaSizeCost, pizzaCrustCost, pizzaToppingsCost);
+
+    // $("ul#pizzaOrderFinal").append("<li>" + pizzaCalc + "</li>");
+
+
+
+
+
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Address(street, city, county) {
+//   this.street = street;
+//   this.city = city;
+//   this.county = county;
+// }
 
 // Contact.prototype.fullName = function () {
 //   return this.firstName + " " + this.lastName;
