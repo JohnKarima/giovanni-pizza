@@ -29,10 +29,9 @@ $(document).ready(function(){
 
 
     if($('input:radio[id="deliveryYes"]').is(":checked")){
-                    $(".delivery-address").show();
+      $(".delivery-address").show();
+    }
 
-              
-          }
 
 
 
@@ -51,6 +50,7 @@ $(document).ready(function(){
 
 
    
+    $('#pizzaForm')[0].reset();
 
 
 
@@ -64,6 +64,14 @@ $(document).ready(function(){
 
   })
 })
+
+
+
+
+
+
+
+   
 
 
 
