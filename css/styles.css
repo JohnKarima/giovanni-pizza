@@ -1,4 +1,8 @@
-#pizza-order {
+#pizza-order{
+  display: none;
+}
+
+.delivery-address{
   display: none;
 }
 

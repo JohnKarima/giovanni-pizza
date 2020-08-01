@@ -1,7 +1,11 @@
 function PizzaOrder(pizzaCostTotality) {
   this.checkoutCost = pizzaCostTotality;
+  this.deliveryAddress = [];
 }
-
+function Address(location, estate){
+  this.location = location;
+  this.estate = estate;
+}
 
 
 
@@ -20,9 +24,20 @@ $(document).ready(function(){
     var pizzaToppingsCostSum = pizzaToppingsCost.reduce(function(a, b){return a+b;})
 
 
-    var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCostSum;
-    // alert(pizzaCostTotal);
 
+    var deliveryOption = parseInt($("input:radio[name=delivery]:checked").val());
+
+
+    if($('input:radio[id="deliveryYes"]').is(":checked")){
+                    $(".delivery-address").show();
+
+              
+          }
+
+
+
+    var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCostSum + deliveryOption;
+    // alert(pizzaCostTotal);
 
 
 
@@ -34,7 +49,10 @@ $(document).ready(function(){
 
     $("ul#pizzaOrderFinal").append("<li><span class='pizza-total-class'>" + newPizzaOrder.checkoutCost + "</span></li>");
 
-    
+
+   
+
+
 
 
     // $(".pizza-total-class").last().click(function() {
@@ -167,3 +185,16 @@ $(document).ready(function(){
 // var pizzaCrustCost = $("input:radio[name=pizzaCrust]:checked").val()
     // var pizzaToppingsCost = $("input:radio[name=topping]:checked").val()
 
+    // if($('input:radio[name="delivery"]').is(":checked")){
+    //   function(){
+    //       if (this.checked && this.value == '150') {
+              // note that, as per comments, the 'changed'
+              // <input> will *always* be checked, as the change
+              // event only fires on checking an <input>, not
+              // on un-checking it.
+              // alert("bababouee")
+              // $(".delivery-address").show();
+
+              // append goes here
+      //     }
+      // });
