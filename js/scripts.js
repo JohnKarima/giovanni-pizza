@@ -1,86 +1,66 @@
-function PizzaOrder(pizzaSize, pizzaCrust, toppings) {
-  this.pizzaSize = pizzaSize;
-  this.pizzaCrust = pizzaCrust;
-  this.toppings = toppings;
+function PizzaOrder(pizzaCostTotality) {
+  this.checkoutCost = pizzaCostTotality;
 }
+
+
+
 
 
 $(document).ready(function(){
   $("form#pizzaForm").submit(function(event){
     event.preventDefault();
-
-
-    // var pizzaCrustCost = $("input:radio[name=pizzaCrust]:checked").val()
-    // var pizzaToppingsCost = $("input:radio[name=topping]:checked").val()
-
-
-
-    
-
-
-//this is the working initial code
     var pizzaSizeCost = parseInt($("input:radio[name=pizzaSize]:checked").val());
     var pizzaCrustCost = parseInt($("#pizzaCrust option:selected").val());
 
     var pizzaToppingsCost1 = $.map($("input[name=toppings]:checked"), function(makeToppingsArray){return makeToppingsArray.value; })
-
-    
     if (pizzaToppingsCost1.length === 0) {
-      // event.preventDefault();
       alert("You must select at least one topping");
     }
-
-
-    
-
-
     var pizzaToppingsCost = pizzaToppingsCost1.map(Number);
     var pizzaToppingsCostSum = pizzaToppingsCost.reduce(function(a, b){return a+b;})
+
+
     var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCostSum;
     alert(pizzaCostTotal);
 
 
 
-   
 
 
-    
-//ends here
-// if (pizzaToppingsCost1.indexOf("pizzaToppingsCost1") < 0) {
-//   event.preventDefault();
-//   alert("You must select at least one topping");
-// }
+    var newPizzaOrder = new PizzaOrder(pizzaCostTotal)
 
 
 
 
+    $("ul#pizzaOrderFinal").append("<li>" + newPizzaOrder.checkoutCost + "</li>");
 
-
-    // var pizzaCalc = new PizzaOrder(pizzaSizeCost, pizzaCrustCost, pizzaToppingsCost);
-
-    // $("ul#pizzaOrderFinal").append("<li>" + pizzaCalc + "</li>");
-
-
-
-    
-
-    
-    
-
-
-
-   
-
-
-
-    // var pizzaToppingsCost = (pizzaToppingsCost1);
-    // var pizzaCostTotal = pizzaToppingsCost;
-    // alert(pizzaCostTotal);
 
 
 
   })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -169,4 +149,14 @@ $(document).ready(function(){
 // });
 
 
+
+
+
+
+
+
+
     // var pizzaToppingsCost = parseInt($("input[name=toppings]:checked").val());
+// var pizzaCrustCost = $("input:radio[name=pizzaCrust]:checked").val()
+    // var pizzaToppingsCost = $("input:radio[name=topping]:checked").val()
+
