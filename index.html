@@ -135,8 +135,30 @@
       Caramelized onions - 50/-
     </label>
   </div>
+  <br>
 
-  <button type="submit" class="btn">Add</button>
+  <button type="submit" class="btn btn-info">Add</button>
+  <br>
+  <br>
+  <br>
+  
+
+  <label for="delivery">Would you like this pizza delivered to your doorstep?</label>
+
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="delivery" id="deliveryYes" value="option1" >
+    <label class="form-check-label" for="exampleRadios1">
+      Yes
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="delivery" id="deliveryNo" value="option2" checked>
+    <label class="form-check-label" for="exampleRadios2">
+      No
+    </label>
+  </div>
+  
 
 
 
@@ -146,13 +168,20 @@
 </div>
 
 
-
+<br>  <br>
 
 
 <h2>Pizza Order Total:</h2>
-          <ul id="pizzaOrderFinal">
+<ul id="pizzaOrderFinal">
 
-          </ul>
+</ul>
+
+
+<div id="pizza-order">
+  <h2></h2>
+
+  <p>Pizza Order: <span class="pizza-order-final"></span></p>
+</div>
   
 </body>
 </html>

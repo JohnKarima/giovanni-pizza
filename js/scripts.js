@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 
     var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCostSum;
-    alert(pizzaCostTotal);
+    // alert(pizzaCostTotal);
 
 
 
@@ -32,9 +32,16 @@ $(document).ready(function(){
 
 
 
-    $("ul#pizzaOrderFinal").append("<li>" + newPizzaOrder.checkoutCost + "</li>");
+    $("ul#pizzaOrderFinal").append("<li><span class='pizza-total-class'>" + newPizzaOrder.checkoutCost + "</span></li>");
+
+    
 
 
+    // $(".pizza-total-class").last().click(function() {
+    //   $("#pizza-order").show();
+    //   $("#pizza-order h2").text(newPizzaOrder.checkoutCost);
+    //   $(".pizza-order-final").text(newPizzaOrder.checkoutCost);
+    // });  
 
 
   })
