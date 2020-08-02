@@ -7,6 +7,21 @@ function Address(location, estate){
   this.estate = estate;
 }
 
+// function deliveryMan() {
+//   $(".delivery-address").show();
+// }
+
+function deliveryMan(){
+  var location = (document.getElementById("location").value);
+  var estate = (document.getElementById("estate").value);
+
+  if (location.length === 0){
+    alert("enter a valid locaiton")
+  }else if (estate.length === 0){
+    alert("enter your estate")
+  }else{
+    alert("Your order will be delivered to " + location + " at " + estate + ".")
+  }}
 
 
 
@@ -25,18 +40,37 @@ $(document).ready(function(){
 
 
 
-    var deliveryOption = parseInt($("input:radio[name=delivery]:checked").val());
+    // var deliveryOption = parseInt($("input:radio[name=delivery]:checked").val());
+    // var deliveryOption = parseInt($("input:button[name=delivery]:onClick()").val());
 
 
-    if($('input:radio[id="deliveryYes"]').is(":checked")){
-      $(".delivery-address").show();
-    }
+  //   $('#deliveryYes').click(function() {
+  //     alert(this.value));
+  // });
 
 
 
 
-    var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCostSum + deliveryOption;
-    // alert(pizzaCostTotal);
+
+
+
+
+
+
+
+    // //shows address slots
+    // if($('input:radio[id="deliveryYes"]').is(":checked")){
+    //   // $(".delivery-address").show();
+    //   var location = (document.getElementById("location").value);
+    //   var estate = (document.getElementById("estate").value);
+    //   alert("Your order will be delivered to " + location + " at " + estate + ".")
+    // }
+
+
+
+
+    var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCostSum 
+    // alert(pizzaCostTotal);     + deliveryOption;
 
 
 
@@ -63,7 +97,7 @@ $(document).ready(function(){
 
 
   })
-})
+ })
 
 
 
