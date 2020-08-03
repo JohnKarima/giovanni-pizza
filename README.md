@@ -2,6 +2,7 @@
 Giovanni's Pizzeria.
 
 ## Project Description 
+- A pizza web application done in HTML, CSS and JS.
 
 ## Author 
 - [John Karima](https://github.com/JohnKarima)
@@ -22,10 +23,7 @@ $ code .
 - Run the project on Live Server
 
 ## Link to Live Project
-- TBD
-
-## Dependencies
-- TBD
+- https://johnkarima.github.io/giovanni-pizza/
 
 ## Technologies Used
 - HTML, CSS, JavaScript, Bootstrap & JQuery
