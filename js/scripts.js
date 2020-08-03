@@ -8,7 +8,18 @@ function deliver() {
   var pizzaTotalFr = pizzaTotalAki.reduce(function (a, b) { return a + b; })
   alert("Your total pizza costs is " + pizzaTotalFr)
 }
+function deliverer() {
+  var yourName = prompt("What is your name? ")
+  var yourAddress = prompt("What is your address? ")
+  if  (yourName.length === 0 || yourAddress.length === 0){
+    alert("Please enter your name and address to continue")
+  }else{
+    alert("Thank you " + yourName + ", your order will be delivered to " + yourAddress)
 
+    }
+
+  }
+  
 $(document).ready(function(){
   $("form#pizzaForm").submit(function(event){
     event.preventDefault();
