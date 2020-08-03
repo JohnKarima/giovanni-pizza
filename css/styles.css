@@ -1,11 +1,14 @@
 .intro{
   background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url(/images/pizza-background.jpeg);
-  height: 100vh;
+  height: 70vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+.intro-text{
+  color: white;
+}
 
 
 
