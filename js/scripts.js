@@ -1,27 +1,51 @@
-function PizzaOrder(pizzaCostTotality) {
-  this.checkoutCost = pizzaCostTotality;
-  this.deliveryAddress = [];
-}
-function Address(location, estate){
-  this.location = location;
-  this.estate = estate;
-}
+// function PizzaOrder(size, crust, topping){
+//   this.size = size;
+//   this.crust = crust;
+//   this.topping = topping;
+// }
+
+// PizzaOrder.prototype.fullOrder = function (){
+//   return this.size + this.crust + this.topping;
+// }
+
+// function Total(size, crust, topping){
+//   this.size = size;
+//   this.crust = crust;
+//   this.topping = topping;
+// }
+
+// Total.prototype.finalTotal = function (){
+//   return this.size + this.crust + this.topping;
+// }
+
+
+
+
+// function PizzaOrder(pizzaCostTotality) {
+//   this.checkoutCost = pizzaCostTotality;
+// }
+
+// PizzaOrder.prototype.fullOrder = function(){
+//   return this.checkoutCost;
+// }
+
+
 
 // function deliveryMan() {
 //   $(".delivery-address").show();
 // }
 
-function deliveryMan(){
-  var location = (document.getElementById("location").value);
-  var estate = (document.getElementById("estate").value);
+// function deliveryMan(){
+//   var location = (document.getElementById("location").value);
+//   var estate = (document.getElementById("estate").value);
 
-  if (location.length === 0){
-    alert("enter a valid locaiton")
-  }else if (estate.length === 0){
-    alert("enter your estate")
-  }else{
-    alert("Your order will be delivered to " + location + " at " + estate + ".")
-  }}
+//   if (location.length === 0){
+//     alert("enter a valid locaiton")
+//   }else if (estate.length === 0){
+//     alert("enter your estate")
+//   }else{
+//     alert("Your order will be delivered to " + location + " at " + estate + ".")
+//   }}
 
 
 
@@ -70,21 +94,48 @@ $(document).ready(function(){
 
 
     var pizzaCostTotal = pizzaSizeCost + pizzaCrustCost + pizzaToppingsCostSum 
-    // alert(pizzaCostTotal);     + deliveryOption;
+    alert(pizzaCostTotal);     //+ deliveryOption;
+
+
+
+    
+
+    // var newPizzaOrder = new PizzaOrder(pizzaSizeCost, pizzaCrustCost, pizzaToppingsCostSum)
+
+
+
+    // alert(newPizzaOrder.fullOrder())
+
+
+    // var newTotalCost = new Total(pizzaSizeCost, pizzaCrustCost, pizzaToppingsCostSum)
+
+    // alert(newTotalCost.finalTotal())
 
 
 
 
-    var newPizzaOrder = new PizzaOrder(pizzaCostTotal)
+    
+    
+
+
+
+    // $("ul#pizzaOrderFinal").append("<li><span class='pizza-total-class'>" + newPizzaOrder.fullOrder() + "</span></li>");
+
+
+    $("ul#pizzaOrderFinal").append("<li><span class='pizza-total-class'>" + pizzaCostTotal + "</span></li>");
 
 
 
 
-    $("ul#pizzaOrderFinal").append("<li><span class='pizza-total-class'>" + newPizzaOrder.checkoutCost + "</span></li>");
 
+    // var plswork = + document.getElementById('pizzaOrderFinal');
+    // alert(plswork)
+
+
+    // var pizzaToppingsCost1 = $.map($("input[name=toppings]:checked"), function(makeToppingsArray){return makeToppingsArray.value; })
 
    
-    $('#pizzaForm')[0].reset();
+    //$('#pizzaForm')[0].reset();
 
 
 
@@ -95,10 +146,12 @@ $(document).ready(function(){
     //   $(".pizza-order-final").text(newPizzaOrder.checkoutCost);
     // });  
 
-
+    
+   
+    
   })
+  
  })
-
 
 
 
