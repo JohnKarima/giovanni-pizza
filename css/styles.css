@@ -14,3 +14,13 @@
 .pizza-total-class:hover {
   text-decoration: underline;
 }   */
+
+
+.icons{
+  padding-left: 1%;
+  }
+  .icons:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.3); 
+  }
