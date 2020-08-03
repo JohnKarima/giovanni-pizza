@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,269 +8,153 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery.js"></script>
   <script src="js/scripts.js"></script>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/images/pizzaIcon.png"/>
+
   <title>Giovanni's Pizzeria</title>
 </head>
-<body>  
+
+<body>
 
   <nav class="navbar navbar-light bg-danger">
     <span class="navbar-brand mb-0 h1">Giovanni's Pizzeria</span>
   </nav>
 
-
-
-
-
   <div class="intro text-center">
-    <p class="intro-text">Welcome to Giovanni's Pizzeria <br> Quality artisinal pizza at affordable prices</p>
-
+    <h1 class="intro-text">Welcome to Giovanni's Pizzeria <br> Quality artisinal pizza at affordable prices</h1>
   </div>
 
+  <div class="container">
 
+    <form id="pizzaForm">
+      <h1>Order your Pizza Below</h1><br>
+
+      <label for="pizzaSize">Pizza Size</label><br>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="pizzaSize" id="smallPizza" value="600" checked>
+        <label class="form-check-label" for="smallPizza">
+          Small - 600/-
+        </label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="pizzaSize" id="mediumPizza" value="800">
+        <label class="form-check-label" for="mediumPizza">
+          Medium - 800/-
+        </label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="pizzaSize" id="largePizza" value="1000">
+        <label class="form-check-label" for="largePizza">
+          Large - 1000/-
+        </label>
+      </div><br><br>
+
+      <div class="form-group">
+        <label for="pizzaCrust">Pizza Crust</label>
+        <select class="form-control" name="pizzaCrust" id="pizzaCrust">
+          <option value="100">Crispy - 100/-</option>
+          <option value="200">Stuffed - 200/-</option>
+          <option value="300">Gluten-free - 300/-</option>
+        </select>
+      </div><br>
+
+      <label for="toppings">Toppings</label><br>
+
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="100" id="extraCheese">
+        <label class="form-check-label" for="defaultCheck1">
+          Extra Cheese - 100/-
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="150" id="bacon">
+        <label class="form-check-label" for="defaultCheck2">
+          Bacon - 150/-
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="200" id="mushrooms">
+        <label class="form-check-label" for="defaultCheck2">
+          Mushrooms - 200/-
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="150" id="chicken">
+        <label class="form-check-label" for="defaultCheck1">
+          Chicken - 150/-
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="150" id="sausage">
+        <label class="form-check-label" for="defaultCheck2">
+          Sausage - 150/-
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="150" id="pepperoni">
+        <label class="form-check-label" for="defaultCheck2">
+          Pepperoni - 150/-
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="50" id="peppers">
+        <label class="form-check-label" for="defaultCheck2">
+          Green Peppers - 50/-
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="toppings" type="checkbox" value="50" id="onions">
+        <label class="form-check-label" for="defaultCheck2">
+          Caramelized onions - 50/-
+        </label>
+      </div><br>
+
+      <button type="submit" class="btn btn-info">Add another pizza</button>
+
+    </form><br><br><br><br>
+    
+    <button onclick="" name="checkout" class="btn btn-info" id="checkout" value="">Checkout</button>
+
+</div><br><br>
+
+  <h2>Pizza Order Total:</h2>
+  <ul id="pizzaOrderFinal">
+
+  </ul>
+
+
+  <div id="pizza-order">
+    <h2></h2>
+
+    <p>Pizza Order: <span class="pizza-order-final"></span></p>
+  </div>
 
 
   <div class="container">
-<form id="pizzaForm">
 
-  <br>
-
-  <label for="pizzaSize">Pizza Size</label>
-
-  <br>
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="pizzaSize" id="smallPizza" value="600" checked>
-    <label class="form-check-label" for="smallPizza">
-      Small - 600/-
-    </label>
-
-
-
-
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9140476754555!2d36.88702431537153!3d-1.2198852359029404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3fc955678a67%3A0x2c30e07746ac972a!2sTRM%20-%20Thika%20Road%20Mall!5e0!3m2!1sen!2ske!4v1596429444804!5m2!1sen!2ske"
+      width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+      tabindex="0"></iframe>
 
   </div>
 
+  <div class="footer text-center">
 
-
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="pizzaSize" id="mediumPizza" value="800">
-    <label class="form-check-label" for="mediumPizza">
-      Medium - 800/-
-    </label>
+    <a href="#">
+      <img class="icons" src="images/social_icons/facebook.png" alt="icon of Facebook social media platform">
+    </a>
+    <a href="#">
+      <img class="icons" src="images/social_icons/twitter.png" alt="Icon of Twitter social media platform">
+    </a>
+    <a href="#">
+      <img class="icons" src="images/social_icons/you_tube.png" alt="Icon of YouTube social media platform">
+    </a>
+    <p class="footerText"><br>GIOVANNI'S PIZZERIA<br>2020</p>
   </div>
 
-
-
-
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="pizzaSize" id="largePizza" value="1000">
-    <label class="form-check-label" for="largePizza">
-      Large - 1000/-
-    </label>
-  </div>
-
-
-
-
-  <br>
-  <br>
-
-  <div class="form-group">
-    <label for="pizzaCrust">Pizza Crust</label>
-    <select class="form-control" name = "pizzaCrust" id="pizzaCrust">
-      <option value="100">Crispy - 100/-</option>
-      <option value="200">Stuffed - 200/-</option>
-      <option value="300">Gluten-free - 300/-</option>
-    </select>
-  </div>
-
-
-  <br>
-
-  <label for="toppings">Toppings</label>
-
-  <br>
-
-
-<!-- 
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="0" id="noToppings">
-    <label class="form-check-label" for="defaultCheck1">
-      No toppings
-    </label>
-  </div> -->
-
-
-
-
-
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="100" id="extraCheese">
-    <label class="form-check-label" for="defaultCheck1">
-      Extra Cheese - 100/-
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="bacon" >
-    <label class="form-check-label" for="defaultCheck2">
-      Bacon - 150/-
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="200" id="mushrooms" >
-    <label class="form-check-label" for="defaultCheck2">
-      Mushrooms - 200/-
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="chicken">
-    <label class="form-check-label" for="defaultCheck1">
-      Chicken - 150/-
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="sausage" >
-    <label class="form-check-label" for="defaultCheck2">
-      Sausage - 150/-
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="150" id="pepperoni" >
-    <label class="form-check-label" for="defaultCheck2">
-      Pepperoni - 150/-
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="50" id="peppers" >
-    <label class="form-check-label" for="defaultCheck2">
-      Green Peppers - 50/-
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" name="toppings" type="checkbox" value="50" id="onions" >
-    <label class="form-check-label" for="defaultCheck2">
-      Caramelized onions - 50/-
-    </label>
-  </div>
-  <br>
-
-  <!-- <br>
-  <br>
-  <br> -->
-  
-
-
-
-
-
-
-
-  <!-- <label for="delivery">Please enter a location for delivery (additional cost of 150/-)</label> <br> -->
-
-
-
-  <!-- deliveryButton -->
-  <!-- <button onclick="">No</button> --> 
-
-
-  <!-- <div class="form-check">
-    <input class="form-check-input" type="radio" name="delivery" id="deliveryYes" value="150" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      Yes (additional cost of 150/-)
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="delivery" id="deliveryNo" value="0">
-    <label class="form-check-label" for="exampleRadios2">
-      No
-    </label>
-  </div> -->
-
-
-<br>
-  <!-- <div id="delivery-addresses">
-    <div class="delivery-address">
-      <div class="form-group">
-        <label for="new-location">Location</label>
-        <input type="text" id="location" class="form-control new-street">
-      </div>
-      <div class="form-group">
-        <label for="new-estate">Estate</label>
-        <input type="text" id="estate" class="form-control new-city">
-      </div>
-    </div>
-  </div>
-
-  <button onclick="deliveryMan()" name="delivery" class="btn btn-info" id="deliveryYes" value="150">Deliver</button>  -->
-
-
-  
-
-
-  <button type="submit" class="btn btn-info">Add another pizza</button>
-
-  
-
-
-
-
-</form>
-<br><br><br><br>
-<button onclick="" name="checkout" class="btn btn-info" id="checkout" value="">Checkout</button> 
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-<br>  <br>
-
-
-<h2>Pizza Order Total:</h2>
-<ul id="pizzaOrderFinal">
-
-</ul>
-
-
-<div id="pizza-order">
-  <h2></h2>
-
-  <p>Pizza Order: <span class="pizza-order-final"></span></p>
-</div>
-
-
-
-<div class="container">
-
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9140476754555!2d36.88702431537153!3d-1.2198852359029404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3fc955678a67%3A0x2c30e07746ac972a!2sTRM%20-%20Thika%20Road%20Mall!5e0!3m2!1sen!2ske!4v1596429444804!5m2!1sen!2ske" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-</div>
-
-
-
-
-<div class="footer text-center">
-
-  <a href="#">
-    <img class="icons" src="images/social_icons/facebook.png" alt="icon of Facebook social media platform">
-  </a>
-  <a href="#">
-    <img class="icons" src="images/social_icons/twitter.png" alt="Icon of Twitter social media platform">
-  </a>
-  <a href="#">
-    <img class="icons" src="images/social_icons/you_tube.png" alt="Icon of YouTube social media platform">
-  </a>
-  <p class="footerText"><br>GIOVANNI'S PIZZERIA<br>2020</p>
-</div>
-  
 </body>
+
 </html>
